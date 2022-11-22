@@ -1,0 +1,9 @@
+def sortedSquares(nums):
+    output = []
+    for n in nums:
+        output.append(n * n)
+    output = sorted(output)
+    return output
+
+nums = [-4,-1,0,3,10]
+print(sortedSquares(nums))

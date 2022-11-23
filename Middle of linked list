@@ -1,0 +1,14 @@
+Floyd's Tortoise Hare Algorithm
+
+1) Make two pointers - fast & slow pointing to head of linked list.
+2) Increment fast by 2 and slow by 1.
+3) Slow will reach the half way when fast reaches the end.
+
+'''
+
+def middleNode(head):
+	slow,fast = head,head
+	while (fast and fast.next):
+		slow = slow.next
+		fast = fast.next.next
+	return slow

@@ -1,0 +1,28 @@
+def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        ans = []
+        if root is None:
+            return ans
+        ans.append(root.val)
+        ans += self.preorderTraversal(root.left)
+        ans += self.preorderTraversal(root.right)
+        return ans
+        
+        
+def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        ans = []
+        if root is None:
+            return ans
+        ans += self.inorderTraversal(root.left)
+        ans.append(root.val)
+        ans += self.inorderTraversal(root.right)
+        return ans
+        
+        
+def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        ans = []
+        if root is None:
+            return ans
+        ans += self.postorderTraversal(root.left)
+        ans += self.postorderTraversal(root.right)
+        ans.append(root.val)
+        return ans       
